@@ -1,0 +1,44 @@
+# gcloud run jobs replace collector/cloudrun-job.yaml --region northamerica-northeast1
+apiVersion: run.googleapis.com/v1
+kind: Job
+metadata:
+  name: mcdocpp-collector
+  labels:
+    app: mcdocpp
+spec:
+  template:
+    spec:
+      taskCount: 1
+      parallelism: 1
+      template:
+        spec:
+          maxRetries: 1
+          timeoutSeconds: 3600
+          serviceAccountName: mcdocpp-collector@PROJECT_ID.iam.gserviceaccount.com
+          containers:
+            - image: northamerica-northeast1-docker.pkg.dev/PROJECT_ID/mcdocpp/collector:latest
+              args: ["crawl"]
+              resources:
+                limits:
+                  cpu: "1"
+                  memory: 512Mi
+              env:
+                - name: MCDOCPP_STORAGE
+                  value: s3
+                - name: S3_BUCKET
+                  value: mcdocpp
+                - name: S3_ENDPOINT_URL
+                  value: https://ACCOUNT_ID.r2.cloudflarestorage.com
+                - name: AWS_DEFAULT_REGION
+                  value: auto
+                - name: AWS_ACCESS_KEY_ID
+                  valueFrom: {secretKeyRef: {name: r2-access-key-id, key: latest}}
+                - name: AWS_SECRET_ACCESS_KEY
+                  valueFrom: {secretKeyRef: {name: r2-secret-access-key, key: latest}}
+                - name: MCD_CLIENT_ID
+                  valueFrom: {secretKeyRef: {name: mcd-client-id, key: latest}}
+                - name: MCD_HEADERS_JSON
+                  valueFrom: {secretKeyRef: {name: mcd-headers-json, key: latest}}
+                # Rotated refresh token: the job also writes the newest one to secrets/refresh_token in the bucket.
+                - name: MCD_REFRESH_TOKEN
+                  valueFrom: {secretKeyRef: {name: mcd-refresh-token, key: latest}}

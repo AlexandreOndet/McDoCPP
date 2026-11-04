@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Phase 0 spike: refresh token, fetch one store's menu, print reward prices and CPP.
 
-  uv run spike.py --store 1234            # live, needs MCD_* env (docs/CAPTURE.md)
-  uv run spike.py --fixture ../fixtures/menu_sample.json
+uv run spike.py --store 1234            # live, needs MCD_* env (docs/CAPTURE.md)
+uv run spike.py --fixture ../fixtures/menu_sample.json
 """
 
 from __future__ import annotations
@@ -13,8 +13,9 @@ import os
 import re
 import sys
 import uuid
+from collections.abc import Iterator
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any
 
 import httpx
 import yaml
@@ -24,18 +25,24 @@ HERE = Path(__file__).parent
 
 
 def headers(access_token: str) -> dict[str, str]:
-    h = json.loads(os.environ.get("MCD_HEADERS_JSON", "{}"))
-    h.update({
-        "authorization": f"Bearer {access_token}",
-        "mcd-clientid": os.environ["MCD_CLIENT_ID"],
-        "mcd-marketid": "CA",
-        "mcd-uuid": str(uuid.uuid4()).upper(),
-    })
+    h: dict[str, str] = json.loads(os.environ.get("MCD_HEADERS_JSON", "{}"))
+    h.update(
+        {
+            "authorization": f"Bearer {access_token}",
+            "mcd-clientid": os.environ["MCD_CLIENT_ID"],
+            "mcd-marketid": "CA",
+            "mcd-uuid": str(uuid.uuid4()).upper(),
+        }
+    )
     return h
 
 
 def refresh(client: httpx.Client) -> tuple[str, str]:
-    r = client.post(f"{BASE}/exp/v1/customer/login/refresh", json={"refreshToken": os.environ["MCD_REFRESH_TOKEN"]}, headers=headers(""))
+    r = client.post(
+        f"{BASE}/exp/v1/customer/login/refresh",
+        json={"refreshToken": os.environ["MCD_REFRESH_TOKEN"]},
+        headers=headers(""),
+    )
     r.raise_for_status()
     body = r.json()["response"]
     return body["accessToken"], body["refreshToken"]
@@ -44,7 +51,7 @@ def refresh(client: httpx.Client) -> tuple[str, str]:
 def fetch_menu(client: httpx.Client, access: str, store: str) -> dict[str, Any]:
     r = client.get(f"{BASE}/ca/gma/api/v1/restaurants/{store}/menus", headers=headers(access))
     r.raise_for_status()
-    return r.json()
+    return dict(r.json())
 
 
 def walk_items(node: Any) -> Iterator[dict[str, Any]]:
@@ -100,7 +107,8 @@ def main() -> int:
                 continue
             price, pid = max(cands)
             cpp = price / tier["tier"]
-            print(f"{tier['tier']:>6} {item['names']['en']:<42} {price/100:>7.2f} {cpp:>7.4f}  {cpp*10:>6.2f}  {fr.get(pid, '')}")
+            name = item["names"]["en"]
+            print(f"{tier['tier']:>6} {name:<42} {price / 100:>7.2f} {cpp:>7.4f}  {cpp * 10:>6.2f}  {fr.get(pid, '')}")
     return 0
 
 
