@@ -55,6 +55,17 @@ make screens          # docs/screens/{desktop,phone,landing,desktop-light}.png
 | 5 | Payload size and rate-limit behaviour | **Needs a live run**; `--save` keeps one payload for sizing |
 | 6 | GMA from GCP vs Cloudflare vs residential IP | **Needs a real-IP test**; the Docker image runs the same `crawl` anywhere |
 
+## Token bootstrap (research 2026-11-04, public sources)
+
+The one-time token capture may be unnecessary. Public trackers mint an anonymous **client_credentials** token and read menus with no account. See `docs/CAPTURE.md` Path A. Open question, answerable with one request from a Canadian IP: does the CA price `/menus` endpoint accept a guest token?
+
+Confirmed from public code (mcbroken, hotnspicy, McReverse, CyrilSLi, BuyMeMcDonalds):
+- `/login/refresh` does not need the Akamai sensor header; refresh rotates both tokens; access token ~15 min.
+- Store sweep is `GET /exp/v1/restaurant/location?distance=&filter=summary&latitude=&longitude=&pageSize=`; fields `nationalStoreNumber`, `address.{addressLine1,cityTown,postalZip}`, `location.{latitude,longitude}`. The `stores.py` parser matches this.
+- Endpoints region-lock to North-American IPs (error 41600).
+
+Gaps that still need your own run: whether a guest token works on CA menus, the current CA `mcd-clientid` (US id is the public default; APK decompile recovers a CA-specific one if needed), the `/menus` payload size, and whether a CA rewards-catalogue endpoint exists.
+
 ## Operator notes
 - Secrets only via env / Secret Manager (`.env.example`). The job writes the rotated refresh token to `secrets/refresh_token` in the bucket; keep Secret Manager at ≤6 versions by hand or a small follow-up.
 - R2 lifecycle rule for `raw/` (14 days) is bucket config.

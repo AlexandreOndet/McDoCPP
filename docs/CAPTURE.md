@@ -1,8 +1,33 @@
 # Capturing GMA credentials (Phase 0)
 
-Done once from a disposable McDonald's account on a real device, via mitmproxy (or Frida on a rooted/jailbroken phone). Only the refresh chain is kept afterwards; the login itself needs the Akamai `x-acf-sensor-data` header and is never replayed by the collector.
+Three paths, cheapest first. Prefer A; fall back to B, then C.
 
-## What to capture
+## Path A — guest token, no account, no proxy (try this first)
+
+Public app trackers (mcbroken, hotnspicy) never log in. They mint an anonymous token with the app's hardcoded client credentials, then read menus. If the price menu accepts this token, no account or capture is ever needed; the collector mints a fresh token each run.
+
+```
+POST https://us-prod.api.mcd.com/v1/security/auth/token
+  authorization: Basic base64("<clientid>:<secret>")
+  mcd-clientid / mcd-clientsecret / mcd-sourceapp: GMA / mcd-marketid: CA / mcd-uuid: <uuid>
+  content-type: application/x-www-form-urlencoded
+  body: grantType=client_credentials
+→ response.token
+```
+
+Set `MCD_CLIENT_ID` / `MCD_CLIENT_SECRET` from the app's client credentials (the US pair is published in the McReverse and mcbroken repos; never commit them). CA routes through `us-prod` with `mcd-marketid: CA`. No CA-specific id is public; if the mint 403s, CA needs its own, recoverable by static APK decompile.
+
+Must run from a North-American IP: these endpoints region-lock with error `41600` otherwise. Verify the guest bearer against `GET /ca/gma/api/v1/restaurants/{id}/menus` before relying on it; if the price menu rejects a guest token, use Path B.
+
+## Path B — magic-link login, no proxy (needs the disposable account)
+
+`POST identity/email` → open the link from that inbox → `PUT /exp/v1/customer/activateandsignin` → ride `/login/refresh`. Public US/CA code does this with no Akamai sensor header. Persist the rotated refresh token after every call (both tokens rotate; access token lives ~15 min).
+
+## Path C — device capture (fallback, needs a proxy)
+
+Done once from a disposable McDonald's account on a real device, via mitmproxy (or Frida on a rooted/jailbroken phone). Only the refresh chain is kept afterwards; the password login needs the Akamai `x-acf-sensor-data` header and is never replayed by the collector. Magic-link login (Path B) avoids that header.
+
+## What to capture (Path C)
 
 Proxy the app, log in, then open any restaurant menu. From the flows, copy:
 

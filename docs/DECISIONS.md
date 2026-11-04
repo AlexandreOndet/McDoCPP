@@ -20,3 +20,9 @@ One line each, newest last.
 - 2026-11-03 Map basemap (OpenFreeMap style) is fetched separately and swapped in with `transformStyle`; store markers render on an inline blank style even if the tile server is down.
 - 2026-11-03 Pages are prerendered shells with `ssr = false`; all data loads client-side, so the site is a pure static deploy with `?store=` query routing.
 - 2026-11-03 Collector raw snapshot pruning (14 days) is done in code for LocalFS; on R2/GCS it is a bucket lifecycle rule.
+- 2026-11-04 Token bootstrap: try Path A (anonymous client_credentials guest token) before any account or capture; mcbroken/hotnspicy run this in production for US+CA. Fall back to magic-link (Path B), then device proxy (Path C).
+- 2026-11-04 CA routes through us-prod with the US client id + mcd-marketid: CA; no CA-specific mcd-clientid is public. If the guest mint 403s, recover the CA client id by static APK decompile (not an Akamai bypass).
+- 2026-11-04 No public CA loyalty/rewards-catalogue endpoint; DE's loyalty surface is points-balance + offers, not a points-tier to product catalogue. Manual rewards_catalogue.yaml stays the source.
+- 2026-11-04 Will not build an Akamai x-acf-sensor-data generator; refresh and magic-link paths do not need it, and defeating bot-detection is out of scope.
+- 2026-11-04 Collector must egress from a North-American IP; endpoints region-lock with error 41600 otherwise (confirmed across public repos).
+- 2026-11-04 Client credentials live in env (MCD_CLIENT_ID/MCD_CLIENT_SECRET), never in the repo; public US pair is in the McReverse/mcbroken repos.
