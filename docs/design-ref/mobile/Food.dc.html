@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Food illustration</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 120px; height: 120px; display: flex; align-items: center; justify-content: center">
+  <sc-if value="{{isFries}}" hint-placeholder-val="{{true}}">
+    <svg role="img" aria-label="Fries" viewBox="0 0 120 120" width="120" height="120">
+      <rect x="40" y="18" width="8" height="52" rx="4" fill="#F6C443" transform="rotate(-14 44 44)"></rect>
+      <rect x="56" y="12" width="8" height="58" rx="4" fill="#F6C443"></rect>
+      <rect x="72" y="18" width="8" height="52" rx="4" fill="#F6C443" transform="rotate(14 76 44)"></rect>
+      <rect x="48" y="22" width="8" height="48" rx="4" fill="#E0A82A" transform="rotate(-6 52 46)"></rect>
+      <rect x="64" y="22" width="8" height="48" rx="4" fill="#E0A82A" transform="rotate(6 68 46)"></rect>
+      <path d="M30 56h60l-8 50H38z" fill="#B5764B"></path>
+      <path d="M30 56h60l-3 18H33z" fill="#8F5A37"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isBurger}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Burger" viewBox="0 0 120 120" width="120" height="120">
+      <path d="M22 54c0-20 17-32 38-32s38 12 38 32z" fill="#E7A24A"></path>
+      <circle cx="44" cy="36" r="2.5" fill="#FFF3E3"></circle><circle cx="60" cy="30" r="2.5" fill="#FFF3E3"></circle><circle cx="76" cy="37" r="2.5" fill="#FFF3E3"></circle>
+      <path d="M20 58h80v6H20z" fill="#6E9F4A"></path>
+      <path d="M24 64h72v8H24z" fill="#F0B23A"></path>
+      <rect x="22" y="72" width="76" height="12" rx="4" fill="#6B3E27"></rect>
+      <path d="M22 88h76v6c0 6-6 10-14 10H36c-8 0-14-4-14-10z" fill="#E7A24A"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isCoffee}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Coffee" viewBox="0 0 120 120" width="120" height="120">
+      <path d="M34 34h52l-6 66H40z" fill="#FFF3E3"></path>
+      <path d="M36 52h48l-2 20H38z" fill="#8F5A37"></path>
+      <rect x="30" y="26" width="60" height="10" rx="3" fill="#B5764B"></rect>
+      <path d="M50 14c0 6 6 6 6 12M62 10c0 6 6 6 6 12" stroke="#C9B5A3" stroke-width="3" fill="none" stroke-linecap="round"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isDrink}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Soft drink" viewBox="0 0 120 120" width="120" height="120">
+      <path d="M36 30h48l-6 76H42z" fill="#FFF3E3"></path>
+      <path d="M38 50h44l-4 48H42z" fill="#F6C443"></path>
+      <rect x="32" y="24" width="56" height="8" rx="3" fill="#B5764B"></rect>
+      <path d="M64 24 70 8" stroke="#6B3E27" stroke-width="5" stroke-linecap="round"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isNuggets}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Chicken nuggets" viewBox="0 0 120 120" width="120" height="120">
+      <path d="M22 50h76v44a6 6 0 0 1-6 6H28a6 6 0 0 1-6-6z" fill="#B5764B"></path>
+      <path d="M22 50h76v10H22z" fill="#8F5A37"></path>
+      <path d="M30 48c0-12 10-18 18-14 8-6 20 0 18 12-2 10-14 10-18 6-6 4-18 2-18-4z" fill="#F0B23A"></path>
+      <path d="M58 44c4-10 18-12 24-4 8 2 8 14 0 16-6 6-20 2-24-6z" fill="#E7A24A"></path>
+      <path d="M46 56c-8-2-12 6-8 12 4 6 14 4 14-2 4 0 8-8 2-10z" fill="#F6C443"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isHashbrown}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Hash brown" viewBox="0 0 120 120" width="120" height="120">
+      <ellipse cx="60" cy="62" rx="40" ry="26" fill="#E7A24A"></ellipse>
+      <ellipse cx="60" cy="58" rx="40" ry="26" fill="#F0B23A"></ellipse>
+      <circle cx="44" cy="54" r="3" fill="#C9862D"></circle><circle cx="66" cy="48" r="3" fill="#C9862D"></circle><circle cx="76" cy="62" r="3" fill="#C9862D"></circle><circle cx="54" cy="66" r="3" fill="#C9862D"></circle>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isPie}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Baked pie" viewBox="0 0 120 120" width="120" height="120">
+      <rect x="24" y="40" width="72" height="40" rx="10" fill="#E7A24A"></rect>
+      <path d="M36 44v32M48 44v32M60 44v32M72 44v32M84 44v32" stroke="#C9862D" stroke-width="3"></path>
+      <path d="M24 56h72M24 66h72" stroke="#C9862D" stroke-width="3"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isWrap}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Snack wrap" viewBox="0 0 120 120" width="120" height="120">
+      <path d="M34 92 40 40c0-10 40-10 40 0l6 52z" fill="#F3D9A4"></path>
+      <path d="M40 40c0-10 40-10 40 0 0 6-10 10-20 10S40 46 40 40z" fill="#6E9F4A"></path>
+      <path d="M46 40c4-4 24-4 28 0-4 4-24 4-28 0z" fill="#E7A24A"></path>
+      <path d="M34 92h52l-2-14H36z" fill="#B5764B"></path>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isMuffin}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Breakfast sandwich" viewBox="0 0 120 120" width="120" height="120">
+      <rect x="24" y="30" width="72" height="18" rx="9" fill="#F3D9A4"></rect>
+      <rect x="22" y="48" width="76" height="10" rx="3" fill="#F0B23A"></rect>
+      <ellipse cx="60" cy="64" rx="40" ry="8" fill="#FFF3E3"></ellipse>
+      <circle cx="60" cy="63" r="7" fill="#F6C443"></circle>
+      <rect x="24" y="72" width="72" height="10" rx="4" fill="#B05A48"></rect>
+      <rect x="24" y="82" width="72" height="18" rx="9" fill="#F3D9A4"></rect>
+    </svg>
+  </sc-if>
+  <sc-if value="{{isMeal}}" hint-placeholder-val="{{false}}">
+    <svg role="img" aria-label="Meal" viewBox="0 0 120 120" width="120" height="120">
+      <path d="M16 56c0-10 8-16 18-16s18 6 18 16z" fill="#E7A24A"></path>
+      <path d="M14 58h40v4H14z" fill="#6E9F4A"></path><rect x="16" y="62" width="36" height="6" rx="2" fill="#6B3E27"></rect>
+      <path d="M16 70h36v4c0 4-4 6-8 6H24c-4 0-8-2-8-6z" fill="#E7A24A"></path>
+      <rect x="66" y="26" width="6" height="30" rx="3" fill="#F6C443" transform="rotate(-10 69 41)"></rect><rect x="76" y="22" width="6" height="34" rx="3" fill="#F6C443"></rect><rect x="86" y="26" width="6" height="30" rx="3" fill="#F6C443" transform="rotate(10 89 41)"></rect>
+      <path d="M62 50h36l-5 30H67z" fill="#B5764B"></path>
+      <path d="M40 86h36l-3 20H43z" fill="#FFF3E3"></path><rect x="38" y="82" width="40" height="6" rx="2" fill="#B5764B"></rect>
+    </svg>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"kind":{"editor":"enum","default":"fries","options":["fries","burger","coffee","drink","nuggets","hashbrown","pie","wrap","muffin","meal"]},"$preview":{"width":120,"height":120}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const k = this.props.kind ?? 'fries';
+    return { isFries: k==='fries', isBurger: k==='burger', isCoffee: k==='coffee', isDrink: k==='drink', isNuggets: k==='nuggets', isHashbrown: k==='hashbrown', isPie: k==='pie', isWrap: k==='wrap', isMuffin: k==='muffin', isMeal: k==='meal' };
+  }
+}
+</script>
+</body>
+</html>
