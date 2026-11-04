@@ -1,7 +1,8 @@
 .PHONY: setup test crawl-fixtures web-dev web-build check lint screens
 
 PNPM ?= corepack pnpm
-UV ?= uv --directory collector
+UV ?= uv --project collector
+PY ?= uv --directory collector run
 FIXTURES := fixtures/synthetic
 
 setup:
@@ -17,11 +18,11 @@ crawl-fixtures: $(FIXTURES)/stores.json
 	rm -rf web/static/data && mkdir -p web/static && cp -r out web/static/data && rm -rf web/static/data/raw web/static/data/state web/static/data/history/*_daily web/static/data/history/*_monthly
 
 test:
-	$(UV) run pytest -q
+	$(PY) pytest -q
 	cd web && $(PNPM) test
 
 lint:
-	$(UV) run ruff check . && $(UV) run ruff format --check . && $(UV) run mypy
+	$(PY) ruff check . && $(PY) ruff format --check . && $(PY) mypy
 	cd web && $(PNPM) lint && $(PNPM) check
 
 check: lint test
