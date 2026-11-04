@@ -1,0 +1,1 @@
+"""McDoCPP collector."""

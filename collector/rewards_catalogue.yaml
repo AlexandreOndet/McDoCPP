@@ -1,0 +1,158 @@
+# MyMcDonald's Rewards (Canada) catalogue. Design doc §4.2.
+# Matching: name_regex against the en-CA string; once resolved, numeric product IDs are pinned in product_ids
+# and take precedence. pick: which variant to use when several match (max = highest price = best CPP).
+# availability: all_day | breakfast. kind: illustration key in the food sprite.
+# Tier placements marked "verify" are curated from the 2025-09-16 change announcement, not from an API.
+versions:
+  - version: "2025-09-16"
+    valid_from: "2025-09-16"
+    valid_to: null
+    tiers:
+      - tier: 2000
+        items:
+          - key: hash_brown
+            names: {en: "Hash Brown", fr: "Galette de pommes de terre"}
+            kind: hashbrown
+            availability: breakfast
+            product_match: {name_regex: "^Hash Brown$", pick: max}
+            product_ids: []
+          - key: coffee_sm_md
+            names: {en: "Premium Roast Coffee (S/M)", fr: "Café Premium (P/M)"}
+            kind: coffee
+            availability: all_day
+            product_match: {name_regex: "^(Sm|Med) Premium Roast Coffee$", pick: max}
+            product_ids: []
+          - key: soft_drink_sm_md
+            names: {en: "Soft Drink (S/M)", fr: "Boisson gazeuse (P/M)"}
+            kind: drink
+            availability: all_day
+            product_match: {name_regex: "^(Sm|Med) Soft Drink$", pick: max}
+            product_ids: []
+          - key: apple_pie
+            names: {en: "Baked Apple Pie", fr: "Chausson aux pommes"}
+            kind: pie
+            availability: all_day
+            product_match: {name_regex: "^Baked Apple Pie$", pick: max}
+            product_ids: []
+      - tier: 4000
+        items:
+          - key: fries_md
+            names: {en: "Medium Fries", fr: "Frites moyennes"}
+            kind: fries
+            availability: all_day
+            product_match: {name_regex: "^Med Fries$", pick: max}
+            product_ids: []
+          - key: cheeseburger
+            names: {en: "Cheeseburger", fr: "Cheeseburger"}
+            kind: burger
+            availability: all_day
+            product_match: {name_regex: "^Cheeseburger$", pick: max}
+            product_ids: []
+          - key: soft_drink_lg
+            names: {en: "Soft Drink (L)", fr: "Boisson gazeuse (G)"}
+            kind: drink
+            availability: all_day
+            product_match: {name_regex: "^Lg Soft Drink$", pick: max}
+            product_ids: []
+          - key: sausage_mcmuffin
+            names: {en: "Sausage McMuffin", fr: "McMuffin Saucisse"}
+            kind: muffin
+            availability: breakfast
+            product_match: {name_regex: "^Sausage McMuffin$", pick: max}
+            product_ids: []
+          - key: cappuccino_sm_md   # added 2025-09-16, tier verify
+            names: {en: "Cappuccino (S/M)", fr: "Cappuccino (P/M)"}
+            kind: coffee
+            availability: all_day
+            product_match: {name_regex: "^(Sm|Med) Cappuccino$", pick: max}
+            product_ids: []
+          - key: mcflurry   # tier verify
+            names: {en: "McFlurry", fr: "McFlurry"}
+            kind: mcflurry
+            availability: all_day
+            product_match: {name_regex: "McFlurry$", pick: max}
+            product_ids: []
+      - tier: 6000
+        items:
+          - key: fries_lg   # moved 4k→6k on 2025-09-16
+            names: {en: "Large Fries", fr: "Grandes frites"}
+            kind: fries
+            availability: all_day
+            product_match: {name_regex: "^Lg Fries$", pick: max}
+            product_ids: []
+          - key: snack_wrap   # added 2025-09-16
+            names: {en: "Chicken Snack Wrap", fr: "Wrap collation au poulet"}
+            kind: wrap
+            availability: all_day
+            product_match: {name_regex: "^Chicken Snack Wrap$", pick: max}
+            product_ids: []
+          - key: egg_mcmuffin
+            names: {en: "Egg McMuffin", fr: "McMuffin Oeuf"}
+            kind: muffin
+            availability: breakfast
+            product_match: {name_regex: "^Egg McMuffin$", pick: max}
+            product_ids: []
+          - key: nuggets_6
+            names: {en: "6 pc Chicken McNuggets", fr: "6 Poulet McCroquettes"}
+            kind: nuggets
+            availability: all_day
+            product_match: {name_regex: "^6 pc Chicken McNuggets$", pick: max}
+            product_ids: []
+      - tier: 10000
+        items:
+          - key: big_mac
+            names: {en: "Big Mac", fr: "Big Mac"}
+            kind: burger
+            availability: all_day
+            product_match: {name_regex: "^Big Mac$", pick: max}
+            product_ids: []
+          - key: filet_o_fish   # added 2025-09-16
+            names: {en: "Filet-O-Fish", fr: "Filet-O-Fish"}
+            kind: fish
+            availability: all_day
+            product_match: {name_regex: "^Filet-O-Fish$", pick: max}
+            product_ids: []
+          - key: qpc
+            names: {en: "Quarter Pounder with Cheese", fr: "Quart de livre avec fromage"}
+            kind: burger
+            availability: all_day
+            product_match: {name_regex: "^Quarter Pounder with Cheese$", pick: max}
+            product_ids: []
+          - key: nuggets_10
+            names: {en: "10 pc Chicken McNuggets", fr: "10 Poulet McCroquettes"}
+            kind: nuggets
+            availability: all_day
+            product_match: {name_regex: "^10 pc Chicken McNuggets$", pick: max}
+            product_ids: []
+          - key: mcchicken   # tier verify
+            names: {en: "McChicken", fr: "McPoulet"}
+            kind: burger
+            availability: all_day
+            product_match: {name_regex: "^McChicken$", pick: max}
+            product_ids: []
+      - tier: 14000
+        items:
+          - key: big_mac_meal
+            names: {en: "Big Mac Extra Value Meal", fr: "Trio Big Mac"}
+            kind: meal
+            availability: all_day
+            product_match: {name_regex: "^Big Mac Extra Value Meal$", pick: max}
+            product_ids: []
+          - key: filet_o_fish_meal   # added 2025-09-16
+            names: {en: "Filet-O-Fish Extra Value Meal", fr: "Trio Filet-O-Fish"}
+            kind: meal
+            availability: all_day
+            product_match: {name_regex: "^Filet-O-Fish Extra Value Meal$", pick: max}
+            product_ids: []
+          - key: qpc_meal
+            names: {en: "Quarter Pounder with Cheese Extra Value Meal", fr: "Trio Quart de livre avec fromage"}
+            kind: meal
+            availability: all_day
+            product_match: {name_regex: "^Quarter Pounder with Cheese Extra Value Meal$", pick: max}
+            product_ids: []
+          - key: nuggets_10_meal
+            names: {en: "10 pc Chicken McNuggets Extra Value Meal", fr: "Trio 10 Poulet McCroquettes"}
+            kind: meal
+            availability: all_day
+            product_match: {name_regex: "^10 pc Chicken McNuggets Extra Value Meal$", pick: max}
+            product_ids: []

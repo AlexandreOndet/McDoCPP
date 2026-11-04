@@ -1,0 +1,1421 @@
+{
+ "channelMenus": {
+  "channels": {
+   "GMA_PICKUP": {
+    "categories": [
+     {
+      "ID": 100,
+      "name": "Breakfast",
+      "items": [
+       {
+        "ID": 1001,
+        "price": 259,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1041,
+        "price": 429,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1042,
+        "price": 579,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2004,
+        "price": 609,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2010,
+        "price": 619,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 101,
+      "name": "McCafé",
+      "items": [
+       {
+        "ID": 1002,
+        "price": 199,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1003,
+        "price": 219,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1004,
+        "price": 249,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1050,
+        "price": 359,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1051,
+        "price": 399,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2007,
+        "price": 299,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2009,
+        "price": 339,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 102,
+      "name": "Beverages",
+      "items": [
+       {
+        "ID": 1010,
+        "price": 189,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1011,
+        "price": 239,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1012,
+        "price": 299,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 103,
+      "name": "Desserts",
+      "items": [
+       {
+        "ID": 1020,
+        "price": 199,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1060,
+        "price": 459,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2003,
+        "price": 349,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2005,
+        "price": 449,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2008,
+        "price": 149,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 104,
+      "name": "Fries",
+      "items": [
+       {
+        "ID": 1030,
+        "price": 419,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1031,
+        "price": 489,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1032,
+        "price": 339,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 105,
+      "name": "Burgers",
+      "items": [
+       {
+        "ID": 1040,
+        "price": 329,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1090,
+        "price": 749,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1092,
+        "price": 809,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2001,
+        "price": 399,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 106,
+      "name": "Chicken",
+      "items": [
+       {
+        "ID": 1070,
+        "price": 559,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1080,
+        "price": 739,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1081,
+        "price": 1069,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1093,
+        "price": 739,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2002,
+        "price": 359,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 107,
+      "name": "Fish",
+      "items": [
+       {
+        "ID": 1091,
+        "price": 729,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 108,
+      "name": "Meals",
+      "items": [
+       {
+        "ID": 1100,
+        "price": 1349,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1101,
+        "price": 1289,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1102,
+        "price": 1399,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1103,
+        "price": 1509,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 109,
+      "name": "Happy Meal",
+      "items": [
+       {
+        "ID": 2006,
+        "price": 709,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 110,
+      "name": "Condiments",
+      "items": [
+       {
+        "ID": 9001,
+        "type": "QUANTITY",
+        "options": [
+         [
+          0,
+          1
+         ],
+         [
+          50,
+          2
+         ]
+        ]
+       },
+       {
+        "ID": 9002,
+        "type": "QUANTITY",
+        "options": [
+         [
+          70,
+          1
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "ID": 199,
+      "name": "Combo components",
+      "items": [
+       {
+        "ID": 1030,
+        "price": 10,
+        "type": "PRODUCT"
+       }
+      ]
+     }
+    ]
+   },
+   "EATIN": {
+    "categories": [
+     {
+      "ID": 100,
+      "name": "Breakfast",
+      "items": [
+       {
+        "ID": 1001,
+        "price": 259,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1041,
+        "price": 429,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1042,
+        "price": 579,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2004,
+        "price": 609,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2010,
+        "price": 619,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 101,
+      "name": "McCafé",
+      "items": [
+       {
+        "ID": 1002,
+        "price": 199,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1003,
+        "price": 219,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1004,
+        "price": 249,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1050,
+        "price": 359,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1051,
+        "price": 399,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2007,
+        "price": 299,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2009,
+        "price": 339,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 102,
+      "name": "Beverages",
+      "items": [
+       {
+        "ID": 1010,
+        "price": 189,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1011,
+        "price": 239,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1012,
+        "price": 299,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 103,
+      "name": "Desserts",
+      "items": [
+       {
+        "ID": 1020,
+        "price": 199,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1060,
+        "price": 459,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2003,
+        "price": 349,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2005,
+        "price": 449,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2008,
+        "price": 149,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 104,
+      "name": "Fries",
+      "items": [
+       {
+        "ID": 1030,
+        "price": 419,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1031,
+        "price": 489,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1032,
+        "price": 339,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 105,
+      "name": "Burgers",
+      "items": [
+       {
+        "ID": 1040,
+        "price": 329,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1090,
+        "price": 749,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1092,
+        "price": 809,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2001,
+        "price": 399,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 106,
+      "name": "Chicken",
+      "items": [
+       {
+        "ID": 1070,
+        "price": 559,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1080,
+        "price": 739,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1081,
+        "price": 1069,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1093,
+        "price": 739,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2002,
+        "price": 359,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 107,
+      "name": "Fish",
+      "items": [
+       {
+        "ID": 1091,
+        "price": 729,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 108,
+      "name": "Meals",
+      "items": [
+       {
+        "ID": 1100,
+        "price": 1349,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1101,
+        "price": 1289,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1102,
+        "price": 1399,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1103,
+        "price": 1509,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 109,
+      "name": "Happy Meal",
+      "items": [
+       {
+        "ID": 2006,
+        "price": 709,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 110,
+      "name": "Condiments",
+      "items": [
+       {
+        "ID": 9001,
+        "type": "QUANTITY",
+        "options": [
+         [
+          0,
+          1
+         ],
+         [
+          50,
+          2
+         ]
+        ]
+       },
+       {
+        "ID": 9002,
+        "type": "QUANTITY",
+        "options": [
+         [
+          70,
+          1
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "ID": 199,
+      "name": "Combo components",
+      "items": [
+       {
+        "ID": 1030,
+        "price": 10,
+        "type": "PRODUCT"
+       }
+      ]
+     }
+    ]
+   },
+   "DELIVERY": {
+    "categories": [
+     {
+      "ID": 100,
+      "name": "Breakfast",
+      "items": [
+       {
+        "ID": 1001,
+        "price": 310,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1041,
+        "price": 514,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1042,
+        "price": 694,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2004,
+        "price": 730,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2010,
+        "price": 742,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 101,
+      "name": "McCafé",
+      "items": [
+       {
+        "ID": 1002,
+        "price": 238,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1003,
+        "price": 262,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1004,
+        "price": 298,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1050,
+        "price": 430,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1051,
+        "price": 478,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2007,
+        "price": 358,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2009,
+        "price": 406,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 102,
+      "name": "Beverages",
+      "items": [
+       {
+        "ID": 1010,
+        "price": 226,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1011,
+        "price": 286,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1012,
+        "price": 358,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 103,
+      "name": "Desserts",
+      "items": [
+       {
+        "ID": 1020,
+        "price": 238,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1060,
+        "price": 550,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2003,
+        "price": 418,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2005,
+        "price": 538,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2008,
+        "price": 178,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 104,
+      "name": "Fries",
+      "items": [
+       {
+        "ID": 1030,
+        "price": 502,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1031,
+        "price": 586,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1032,
+        "price": 406,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 105,
+      "name": "Burgers",
+      "items": [
+       {
+        "ID": 1040,
+        "price": 394,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1090,
+        "price": 898,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1092,
+        "price": 970,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2001,
+        "price": 478,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 106,
+      "name": "Chicken",
+      "items": [
+       {
+        "ID": 1070,
+        "price": 670,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1080,
+        "price": 886,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1081,
+        "price": 1282,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1093,
+        "price": 886,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 2002,
+        "price": 430,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 107,
+      "name": "Fish",
+      "items": [
+       {
+        "ID": 1091,
+        "price": 874,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 108,
+      "name": "Meals",
+      "items": [
+       {
+        "ID": 1100,
+        "price": 1618,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1101,
+        "price": 1546,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1102,
+        "price": 1678,
+        "type": "PRODUCT"
+       },
+       {
+        "ID": 1103,
+        "price": 1810,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 109,
+      "name": "Happy Meal",
+      "items": [
+       {
+        "ID": 2006,
+        "price": 850,
+        "type": "PRODUCT"
+       }
+      ]
+     },
+     {
+      "ID": 110,
+      "name": "Condiments",
+      "items": [
+       {
+        "ID": 9001,
+        "type": "QUANTITY",
+        "options": [
+         [
+          0,
+          1
+         ],
+         [
+          50,
+          2
+         ]
+        ]
+       },
+       {
+        "ID": 9002,
+        "type": "QUANTITY",
+        "options": [
+         [
+          70,
+          1
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "ID": 199,
+      "name": "Combo components",
+      "items": [
+       {
+        "ID": 1030,
+        "price": 12,
+        "type": "PRODUCT"
+       }
+      ]
+     }
+    ]
+   }
+  },
+  "localizations": {
+   "en-CA": {
+    "strings": [
+     "Hash Brown",
+     "Sm Premium Roast Coffee",
+     "Med Premium Roast Coffee",
+     "Lg Premium Roast Coffee",
+     "Sm Soft Drink",
+     "Med Soft Drink",
+     "Lg Soft Drink",
+     "Baked Apple Pie",
+     "Med Fries",
+     "Lg Fries",
+     "Sm Fries",
+     "Cheeseburger",
+     "Sausage McMuffin",
+     "Egg McMuffin",
+     "Sm Cappuccino",
+     "Med Cappuccino",
+     "Oreo McFlurry",
+     "Chicken Snack Wrap",
+     "6 pc Chicken McNuggets",
+     "10 pc Chicken McNuggets",
+     "Big Mac",
+     "Filet-O-Fish",
+     "Quarter Pounder with Cheese",
+     "McChicken",
+     "Big Mac Extra Value Meal",
+     "Filet-O-Fish Extra Value Meal",
+     "Quarter Pounder with Cheese Extra Value Meal",
+     "10 pc Chicken McNuggets Extra Value Meal",
+     "McDouble",
+     "Junior Chicken",
+     "Hot Fudge Sundae",
+     "Sausage McGriddles",
+     "Med Chocolate Shake",
+     "Hamburger Happy Meal",
+     "Blueberry Muffin",
+     "Chocolate Chip Cookie",
+     "Med Iced Coffee",
+     "Bacon 'n Egg McMuffin",
+     "Extra Sauce",
+     "Add Cheese",
+     "** Delivery DD **",
+     "** Delivery Uber **",
+     "** Delivery Skip **"
+    ],
+    "lookup": {
+     "1001": [
+      1001,
+      "SKU1001",
+      0
+     ],
+     "1002": [
+      1002,
+      "SKU1002",
+      1
+     ],
+     "1003": [
+      1003,
+      "SKU1003",
+      2
+     ],
+     "1004": [
+      1004,
+      "SKU1004",
+      3
+     ],
+     "1010": [
+      1010,
+      "SKU1010",
+      4
+     ],
+     "1011": [
+      1011,
+      "SKU1011",
+      5
+     ],
+     "1012": [
+      1012,
+      "SKU1012",
+      6
+     ],
+     "1020": [
+      1020,
+      "SKU1020",
+      7
+     ],
+     "1030": [
+      1030,
+      "SKU1030",
+      8
+     ],
+     "1031": [
+      1031,
+      "SKU1031",
+      9
+     ],
+     "1032": [
+      1032,
+      "SKU1032",
+      10
+     ],
+     "1040": [
+      1040,
+      "SKU1040",
+      11
+     ],
+     "1041": [
+      1041,
+      "SKU1041",
+      12
+     ],
+     "1042": [
+      1042,
+      "SKU1042",
+      13
+     ],
+     "1050": [
+      1050,
+      "SKU1050",
+      14
+     ],
+     "1051": [
+      1051,
+      "SKU1051",
+      15
+     ],
+     "1060": [
+      1060,
+      "SKU1060",
+      16
+     ],
+     "1070": [
+      1070,
+      "SKU1070",
+      17
+     ],
+     "1080": [
+      1080,
+      "SKU1080",
+      18
+     ],
+     "1081": [
+      1081,
+      "SKU1081",
+      19
+     ],
+     "1090": [
+      1090,
+      "SKU1090",
+      20
+     ],
+     "1091": [
+      1091,
+      "SKU1091",
+      21
+     ],
+     "1092": [
+      1092,
+      "SKU1092",
+      22
+     ],
+     "1093": [
+      1093,
+      "SKU1093",
+      23
+     ],
+     "1100": [
+      1100,
+      "SKU1100",
+      24
+     ],
+     "1101": [
+      1101,
+      "SKU1101",
+      25
+     ],
+     "1102": [
+      1102,
+      "SKU1102",
+      26
+     ],
+     "1103": [
+      1103,
+      "SKU1103",
+      27
+     ],
+     "2001": [
+      2001,
+      "SKU2001",
+      28
+     ],
+     "2002": [
+      2002,
+      "SKU2002",
+      29
+     ],
+     "2003": [
+      2003,
+      "SKU2003",
+      30
+     ],
+     "2004": [
+      2004,
+      "SKU2004",
+      31
+     ],
+     "2005": [
+      2005,
+      "SKU2005",
+      32
+     ],
+     "2006": [
+      2006,
+      "SKU2006",
+      33
+     ],
+     "2007": [
+      2007,
+      "SKU2007",
+      34
+     ],
+     "2008": [
+      2008,
+      "SKU2008",
+      35
+     ],
+     "2009": [
+      2009,
+      "SKU2009",
+      36
+     ],
+     "2010": [
+      2010,
+      "SKU2010",
+      37
+     ],
+     "9001": [
+      9001,
+      "SKU9001",
+      38
+     ],
+     "9002": [
+      9002,
+      "SKU9002",
+      39
+     ],
+     "8000": [
+      8000,
+      "SKU8000",
+      40
+     ],
+     "8001": [
+      8001,
+      "SKU8001",
+      41
+     ],
+     "8002": [
+      8002,
+      "SKU8002",
+      42
+     ]
+    }
+   },
+   "fr-CA": {
+    "strings": [
+     "Galette de pommes de terre",
+     "Café Premium Pt",
+     "Café Premium Moy",
+     "Café Premium Gd",
+     "Boisson gazeuse Pt",
+     "Boisson gazeuse Moy",
+     "Boisson gazeuse Gd",
+     "Chausson aux pommes",
+     "Frites Moy",
+     "Frites Gd",
+     "Frites Pt",
+     "Cheeseburger",
+     "McMuffin Saucisse",
+     "McMuffin Oeuf",
+     "Cappuccino Pt",
+     "Cappuccino Moy",
+     "McFlurry Oreo",
+     "Wrap collation au poulet",
+     "6 Poulet McCroquettes",
+     "10 Poulet McCroquettes",
+     "Big Mac",
+     "Filet-O-Fish",
+     "Quart de livre avec fromage",
+     "McPoulet",
+     "Trio Big Mac",
+     "Trio Filet-O-Fish",
+     "Trio Quart de livre avec fromage",
+     "Trio 10 Poulet McCroquettes",
+     "McDouble",
+     "Poulet Junior",
+     "Sundae au fudge chaud",
+     "McGriddles Saucisse",
+     "Lait fouetté au chocolat Moy",
+     "Joyeux festin Hamburger",
+     "Muffin aux bleuets",
+     "Biscuit aux brisures de chocolat",
+     "Café glacé Moy",
+     "McMuffin Oeuf et bacon",
+     "Sauce supplémentaire",
+     "Ajouter fromage",
+     "** Delivery DD **",
+     "** Delivery Uber **",
+     "** Delivery Skip **"
+    ],
+    "lookup": {
+     "1001": [
+      1001,
+      "SKU1001",
+      0
+     ],
+     "1002": [
+      1002,
+      "SKU1002",
+      1
+     ],
+     "1003": [
+      1003,
+      "SKU1003",
+      2
+     ],
+     "1004": [
+      1004,
+      "SKU1004",
+      3
+     ],
+     "1010": [
+      1010,
+      "SKU1010",
+      4
+     ],
+     "1011": [
+      1011,
+      "SKU1011",
+      5
+     ],
+     "1012": [
+      1012,
+      "SKU1012",
+      6
+     ],
+     "1020": [
+      1020,
+      "SKU1020",
+      7
+     ],
+     "1030": [
+      1030,
+      "SKU1030",
+      8
+     ],
+     "1031": [
+      1031,
+      "SKU1031",
+      9
+     ],
+     "1032": [
+      1032,
+      "SKU1032",
+      10
+     ],
+     "1040": [
+      1040,
+      "SKU1040",
+      11
+     ],
+     "1041": [
+      1041,
+      "SKU1041",
+      12
+     ],
+     "1042": [
+      1042,
+      "SKU1042",
+      13
+     ],
+     "1050": [
+      1050,
+      "SKU1050",
+      14
+     ],
+     "1051": [
+      1051,
+      "SKU1051",
+      15
+     ],
+     "1060": [
+      1060,
+      "SKU1060",
+      16
+     ],
+     "1070": [
+      1070,
+      "SKU1070",
+      17
+     ],
+     "1080": [
+      1080,
+      "SKU1080",
+      18
+     ],
+     "1081": [
+      1081,
+      "SKU1081",
+      19
+     ],
+     "1090": [
+      1090,
+      "SKU1090",
+      20
+     ],
+     "1091": [
+      1091,
+      "SKU1091",
+      21
+     ],
+     "1092": [
+      1092,
+      "SKU1092",
+      22
+     ],
+     "1093": [
+      1093,
+      "SKU1093",
+      23
+     ],
+     "1100": [
+      1100,
+      "SKU1100",
+      24
+     ],
+     "1101": [
+      1101,
+      "SKU1101",
+      25
+     ],
+     "1102": [
+      1102,
+      "SKU1102",
+      26
+     ],
+     "1103": [
+      1103,
+      "SKU1103",
+      27
+     ],
+     "2001": [
+      2001,
+      "SKU2001",
+      28
+     ],
+     "2002": [
+      2002,
+      "SKU2002",
+      29
+     ],
+     "2003": [
+      2003,
+      "SKU2003",
+      30
+     ],
+     "2004": [
+      2004,
+      "SKU2004",
+      31
+     ],
+     "2005": [
+      2005,
+      "SKU2005",
+      32
+     ],
+     "2006": [
+      2006,
+      "SKU2006",
+      33
+     ],
+     "2007": [
+      2007,
+      "SKU2007",
+      34
+     ],
+     "2008": [
+      2008,
+      "SKU2008",
+      35
+     ],
+     "2009": [
+      2009,
+      "SKU2009",
+      36
+     ],
+     "2010": [
+      2010,
+      "SKU2010",
+      37
+     ],
+     "9001": [
+      9001,
+      "SKU9001",
+      38
+     ],
+     "9002": [
+      9002,
+      "SKU9002",
+      39
+     ],
+     "8000": [
+      8000,
+      "SKU8000",
+      40
+     ],
+     "8001": [
+      8001,
+      "SKU8001",
+      41
+     ],
+     "8002": [
+      8002,
+      "SKU8002",
+      42
+     ]
+    }
+   }
+  }
+ }
+}

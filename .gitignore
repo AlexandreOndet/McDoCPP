@@ -1,0 +1,16 @@
+.env
+out/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+web/.svelte-kit/
+web/build/
+web/static/data
+web/test-results/
+web/playwright-report/
+fixtures/synthetic/
+fixtures/captured/
