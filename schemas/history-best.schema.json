@@ -1,0 +1,72 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/history-best.schema.json",
+ "title": "history-best",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "scope": {
+   "type": "string"
+  },
+  "series": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "month": {
+      "type": "string"
+     },
+     "median_best_cpp": {
+      "type": "number"
+     },
+     "mean_best_cpp": {
+      "type": "number"
+     },
+     "best_item_mode": {
+      "type": "string"
+     },
+     "n_days": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "month",
+     "median_best_cpp",
+     "mean_best_cpp",
+     "best_item_mode",
+     "n_days"
+    ],
+    "additionalProperties": true
+   }
+  },
+  "catalogue_changes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "version": {
+      "type": "string"
+     },
+     "valid_from": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "version",
+     "valid_from"
+    ],
+    "additionalProperties": true
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "scope",
+  "series",
+  "catalogue_changes"
+ ],
+ "additionalProperties": true
+}

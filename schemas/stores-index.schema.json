@@ -1,0 +1,91 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/stores-index.schema.json",
+ "title": "stores-index",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "stores": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "address": {
+      "type": "string"
+     },
+     "city": {
+      "type": "string"
+     },
+     "province": {
+      "type": "string"
+     },
+     "postal": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "lat": {
+      "type": "number"
+     },
+     "lon": {
+      "type": "number"
+     },
+     "best_cpp": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "best_item_key": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "as_of": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "id",
+     "name",
+     "address",
+     "city",
+     "province",
+     "postal",
+     "lat",
+     "lon",
+     "best_cpp",
+     "best_item_key",
+     "as_of"
+    ],
+    "additionalProperties": true
+   }
+  },
+  "best_cpp_quantiles": {
+   "type": "array",
+   "items": {
+    "type": "number"
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "stores",
+  "best_cpp_quantiles"
+ ],
+ "additionalProperties": true
+}

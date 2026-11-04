@@ -1,0 +1,117 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/aggregate.schema.json",
+ "title": "aggregate",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "scope": {
+   "type": "string"
+  },
+  "window_days": {
+   "type": "integer"
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string"
+     },
+     "tier": {
+      "type": "integer"
+     },
+     "names": {
+      "type": "object",
+      "properties": {
+       "en": {
+        "type": "string"
+       },
+       "fr": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "en",
+       "fr"
+      ],
+      "additionalProperties": true
+     },
+     "kind": {
+      "type": "string"
+     },
+     "breakfast": {
+      "type": "boolean"
+     },
+     "n_stores": {
+      "type": "integer"
+     },
+     "median_cpp": {
+      "type": "number"
+     },
+     "mean_cpp": {
+      "type": "number"
+     },
+     "p10": {
+      "type": "number"
+     },
+     "p90": {
+      "type": "number"
+     },
+     "spread": {
+      "type": "number"
+     },
+     "value_per_1k": {
+      "type": "number"
+     },
+     "daily_median": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "date": {
+         "type": "string"
+        },
+        "median_cpp": {
+         "type": "number"
+        }
+       },
+       "required": [
+        "date",
+        "median_cpp"
+       ],
+       "additionalProperties": true
+      }
+     }
+    },
+    "required": [
+     "key",
+     "tier",
+     "names",
+     "kind",
+     "breakfast",
+     "n_stores",
+     "median_cpp",
+     "mean_cpp",
+     "p10",
+     "p90",
+     "spread",
+     "value_per_1k",
+     "daily_median"
+    ],
+    "additionalProperties": true
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "scope",
+  "window_days",
+  "items"
+ ],
+ "additionalProperties": true
+}

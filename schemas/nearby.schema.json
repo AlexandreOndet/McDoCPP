@@ -1,0 +1,90 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/nearby.schema.json",
+ "title": "nearby",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "item": {
+   "type": "object",
+   "properties": {
+    "key": {
+     "type": "string"
+    },
+    "tier": {
+     "type": "integer"
+    },
+    "names": {
+     "type": "object",
+     "properties": {
+      "en": {
+       "type": "string"
+      },
+      "fr": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "en",
+      "fr"
+     ],
+     "additionalProperties": true
+    },
+    "kind": {
+     "type": "string"
+    },
+    "breakfast": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "key",
+    "tier",
+    "names",
+    "kind",
+    "breakfast"
+   ],
+   "additionalProperties": true
+  },
+  "stores": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "lat": {
+      "type": "number"
+     },
+     "lon": {
+      "type": "number"
+     },
+     "cpp": {
+      "type": "number"
+     },
+     "price_cents": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "id",
+     "lat",
+     "lon",
+     "cpp",
+     "price_cents"
+    ],
+    "additionalProperties": true
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "item",
+  "stores"
+ ],
+ "additionalProperties": true
+}

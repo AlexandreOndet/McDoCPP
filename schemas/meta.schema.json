@@ -1,0 +1,46 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/meta.schema.json",
+ "title": "meta",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "catalogue_version": {
+   "type": "string"
+  },
+  "store_count": {
+   "type": "integer"
+  },
+  "stores_fresh": {
+   "type": "integer"
+  },
+  "crawl": {
+   "type": "object"
+  },
+  "alerts": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "tiers": {
+   "type": "array",
+   "items": {
+    "type": "integer"
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "catalogue_version",
+  "store_count",
+  "stores_fresh",
+  "crawl",
+  "alerts",
+  "tiers"
+ ],
+ "additionalProperties": true
+}

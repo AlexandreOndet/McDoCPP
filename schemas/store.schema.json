@@ -1,0 +1,190 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/store.schema.json",
+ "title": "store",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "catalogue_version": {
+   "type": "string"
+  },
+  "store": {
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "nsn": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "name": {
+     "type": "string"
+    },
+    "address": {
+     "type": "string"
+    },
+    "city": {
+     "type": "string"
+    },
+    "province": {
+     "type": "string"
+    },
+    "postal": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "lat": {
+     "type": "number"
+    },
+    "lon": {
+     "type": "number"
+    }
+   },
+   "required": [
+    "id",
+    "name",
+    "city",
+    "province",
+    "lat",
+    "lon"
+   ],
+   "additionalProperties": true
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string"
+     },
+     "tier": {
+      "type": "integer"
+     },
+     "names": {
+      "type": "object",
+      "properties": {
+       "en": {
+        "type": "string"
+       },
+       "fr": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "en",
+       "fr"
+      ],
+      "additionalProperties": true
+     },
+     "kind": {
+      "type": "string"
+     },
+     "breakfast": {
+      "type": "boolean"
+     },
+     "product_id": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "price_cents": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "cpp": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "value_per_1k": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "available": {
+      "type": "boolean"
+     },
+     "national_median_cpp": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "province_median_cpp": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "delta_vs_national": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "delta_vs_province": {
+      "type": [
+       "number",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "key",
+     "tier",
+     "names",
+     "kind",
+     "breakfast",
+     "product_id",
+     "price_cents",
+     "cpp",
+     "value_per_1k",
+     "available",
+     "national_median_cpp",
+     "province_median_cpp",
+     "delta_vs_national",
+     "delta_vs_province"
+    ],
+    "additionalProperties": true
+   }
+  },
+  "best_item_key": {
+   "type": [
+    "string",
+    "null"
+   ]
+  },
+  "best_by_tier": {
+   "type": "object",
+   "additionalProperties": {
+    "type": [
+     "string",
+     "null"
+    ]
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "catalogue_version",
+  "store",
+  "items",
+  "best_item_key",
+  "best_by_tier"
+ ],
+ "additionalProperties": true
+}

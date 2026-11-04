@@ -1,0 +1,126 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "$id": "https://mcdocpp.ca/schemas/history.schema.json",
+ "title": "history",
+ "type": "object",
+ "properties": {
+  "as_of": {
+   "type": "string",
+   "format": "date-time"
+  },
+  "scope": {
+   "type": "string"
+  },
+  "item": {
+   "type": "object",
+   "properties": {
+    "key": {
+     "type": "string"
+    },
+    "tier": {
+     "type": "integer"
+    },
+    "names": {
+     "type": "object",
+     "properties": {
+      "en": {
+       "type": "string"
+      },
+      "fr": {
+       "type": "string"
+      }
+     },
+     "required": [
+      "en",
+      "fr"
+     ],
+     "additionalProperties": true
+    },
+    "kind": {
+     "type": "string"
+    },
+    "breakfast": {
+     "type": "boolean"
+    }
+   },
+   "required": [
+    "key",
+    "tier",
+    "names",
+    "kind",
+    "breakfast"
+   ],
+   "additionalProperties": true
+  },
+  "series": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "month": {
+      "type": "string"
+     },
+     "median_cpp": {
+      "type": "number"
+     },
+     "mean_cpp": {
+      "type": "number"
+     },
+     "p10": {
+      "type": "number"
+     },
+     "p90": {
+      "type": "number"
+     },
+     "n_stores": {
+      "type": "integer"
+     },
+     "share_best": {
+      "type": "number"
+     },
+     "n_days": {
+      "type": "integer"
+     }
+    },
+    "required": [
+     "month",
+     "median_cpp",
+     "mean_cpp",
+     "p10",
+     "p90",
+     "n_stores",
+     "share_best",
+     "n_days"
+    ],
+    "additionalProperties": true
+   }
+  },
+  "catalogue_changes": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "properties": {
+     "version": {
+      "type": "string"
+     },
+     "valid_from": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "version",
+     "valid_from"
+    ],
+    "additionalProperties": true
+   }
+  }
+ },
+ "required": [
+  "as_of",
+  "scope",
+  "item",
+  "series",
+  "catalogue_changes"
+ ],
+ "additionalProperties": true
+}
