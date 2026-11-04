@@ -1,0 +1,165 @@
+@import '@fontsource-variable/bricolage-grotesque/opsz.css';
+@import '@fontsource/nunito-sans/400.css';
+@import '@fontsource/nunito-sans/600.css';
+@import '@fontsource/nunito-sans/700.css';
+
+:root {
+  color-scheme: dark;
+  --bg: #1b1310;
+  --surface: #271c16;
+  --surface-2: #33261e;
+  --border: #40312a;
+  --text: #fff3e3;
+  --muted: #c9b5a3;
+  --gold: #f6c443;
+  --gold-hi: #ffd970;
+  --gold-text: #f6c443;
+  --ink-on-gold: #1b1310;
+  --ink-on-gold-2: #4a2e1e;
+  --success: #9fe0b0;
+  --warn: #f2a58d;
+  --meter-track: #33261e;
+  --focus: #ffd970;
+
+  --display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --body: 'Nunito Sans', system-ui, sans-serif;
+  --r-xl: 24px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  --hit: 44px;
+  --dash: 1px dashed var(--border);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #fff7ea;
+    --surface: #ffffff;
+    --surface-2: #f6e9d6;
+    --border: #e4d3be;
+    --text: #1b1310;
+    --muted: #6b5a4d;
+    --gold-text: #7a4f00;
+    --success: #2f7d4a;
+    --warn: #b8471f;
+    --meter-track: #f0e2cc;
+    --focus: #7a4f00;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+a {
+  color: var(--gold-text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-variation-settings: 'opsz' 96;
+}
+
+p {
+  margin: 0;
+}
+
+.display {
+  font-family: var(--display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variation-settings: 'opsz' 96;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* pill button, 44px hit target */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: var(--hit);
+  padding: 0 16px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pill:hover {
+  border-color: var(--muted);
+}
+
+.pill[aria-pressed='true'],
+.pill.is-active {
+  background: var(--gold);
+  color: var(--ink-on-gold);
+  border-color: var(--gold);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
